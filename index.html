@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example</title>
+
+        <!-- Custom css -->
+        <link rel="stylesheet" type="text/css" href="index.css">
+
+        <!-- Bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- That tiny little icon displayed in the tab -->
+        <link rel="icon" type="image/png" href="profile.png">
+    </head>
+
+    <body>
+
+        <!-- A container that applies a blurry filter on the background -->
+        <div id="blurry-background"></div>
+
+        <!-- A container -->
+        <div class="container centered-container text-center">
+            <!-- The profile picture of john doe -->
+            <img id="profile" src="profile.png">
+
+            <!-- Our awesome header -->
+            <h1>Welcome to my <span id="typed"></span> website!</h1>
+
+            <!-- A short text about john doe -->
+            <p>
+                My name is John Doe and I'm a web-designer from germany.<br/>
+                This site is my first attempt to create a website based on the Bootstrap framework.<br/>
+            </p>
+
+            <p>
+                Find me on social media<br/>
+                <a href="https://example.com" target="_blank"><img class="social-icon" src="twitter-icon.png"></a>
+                <a href="https://example.com" target="_blank"><img class="social-icon" src="github-icon.png"></a>
+            </p>
+        </div>
+
+        <!-- Bootstrap javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- Typed.js -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+        <!-- Custom javascript -->
+        <script>
+
+            // Setup typed.js
+            var options = {
+                strings: ['first^2000', 'awesome^2000', 'cool^2000', 'fantastic^2000', 'creative^2000'],
+                typeSpeed: 40,
+                showCursor: false,
+                loop: true,
+                loopCount: Infinity
+            };
+
+            var typed = new Typed('#typed', options);
+
+            // SlideDown of the profile-pricture
+            $(document).ready( () => {
+                $('#profile').slideDown();
+            } );
+
+        </script>
+    </body>
+
+</html>
